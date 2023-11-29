@@ -1,8 +1,7 @@
-type Props = {
-  permissions: undefined | string[];
-};
+import { useAppContext } from "./AppContext";
 
-export const Content = ({ permissions }: Props) => {
+export const Content = () => {
+  const { permissions } = useAppContext();
   if (permissions === undefined) {
     return null;
   }
