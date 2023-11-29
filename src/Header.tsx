@@ -6,7 +6,7 @@ export const Header = () => {
   const { user, loading, dispatch } = useAppContext();
   async function handleSignInClick() {
     dispatch({ type: "authenticate" });
-    const authenticatedUser: any = await authenticate();
+    const authenticatedUser = await authenticate();
     dispatch({ type: "authenticated", user: authenticatedUser });
     if (authenticatedUser !== undefined) {
       dispatch({ type: "authorize" });

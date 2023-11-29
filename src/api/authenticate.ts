@@ -4,7 +4,7 @@ export type User = {
 };
 
 export const authenticate = () => {
-  return new Promise((resolve) =>
+  return new Promise<User>((resolve) =>
     setTimeout(() => resolve({ id: "1", name: "Bob" }), 1000),
   );
 };
